@@ -1,0 +1,28 @@
+:root,
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-item.active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.datatable {
+    width: 100%;
+}
+
+.datatable tr,
+.datatable th,
+.datatable td {
+    border: 1px solid #dee2e6;
+}
+
+.datatable thead {
+    background-color: #f8f9fa;
+}

@@ -1,6 +1,14 @@
+@php
+    $image = $product->image_url;
+
+    if (!Str::startsWith($image, 'http')) {
+        $image = "data:image/png;base64, $image";
+    }
+@endphp
+
 <div class="min-w-[300px] max-h-auto">
     <div class="bg-white shadow-md rounded-md p-5">
-        <img src="{{ $product->image_url }}" alt="{{ $product->name }}" class="w-full h-60 object-cover rounded-md">
+        <img src="{{ $image }}" alt="{{ $product->name }}" class="w-full h-60 object-cover rounded-md">
         <div class="mt-5">
             <h2 class="text-xl font-bold">{{ $product->name }}</h2>
             <p class="mt-2 text-gray-500 truncate">{{ $product->description }}</p>

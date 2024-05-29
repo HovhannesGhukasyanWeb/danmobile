@@ -60,7 +60,7 @@ class ProductsController extends Controller
             $product->price = $request->price;
             $product->category_id = $request->category_id;
             $product->stock_quantity = $request->stock_quantity;
-            $product->image_url = $request->file('image_url')->store('products', 'public');
+            $product->image_url = base64_encode($request->file('image_url')->getContent());
             $product->save();
 
             return redirect()->route('admin.products.index')->with('success', 'Product created successfully');
@@ -114,7 +114,7 @@ class ProductsController extends Controller
             $product->price = $request->price;
             $product->category_id = $request->category_id;
             $product->stock_quantity = $request->stock_quantity;
-            $product->image_url = $request->file('image_url')->store('products', 'public');
+            $product->image_url = base64_encode($request->file('image_url')->getContent());
             $product->save();
 
             return redirect()->route('admin.products.index')->with('success', 'Product updated successfully');

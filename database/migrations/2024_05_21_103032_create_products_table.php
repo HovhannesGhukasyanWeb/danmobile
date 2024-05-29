@@ -8,7 +8,7 @@ return new class extends Migration {
     /**
      * Run the migrations.
      */
-    public function up() : void
+    public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->decimal('price', 10, 2);
             $table->foreignId('category_id')->constrained();
             $table->integer('stock_quantity');
-            $table->string('image_url', 255)->nullable();
+            $table->longText('image_url')->nullable();
             $table->timestamps();
         });
     }
@@ -25,7 +25,7 @@ return new class extends Migration {
     /**
      * Reverse the migrations.
      */
-    public function down() : void
+    public function down(): void
     {
         Schema::dropIfExists('products');
     }

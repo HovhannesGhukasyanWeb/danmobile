@@ -36,10 +36,10 @@
                         <td class="p-2">{{$user->email}}</td>
                         <td class="p-4">
                             <div class="flex items-center gap-2">
-                                <a href="{{ route('admin.users.destroy', $user->id) }}"
-                                    class="remove-resource bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
-                                    <i class="fas fa-trash"></i>
-                                </a>
+                                <!-- <a href="{{ route('admin.users.destroy', $user->id) }}"
+                                        class="remove-resource bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+                                        <i class="fas fa-trash"></i>
+                                    </a> -->
                                 <a href="{{ route('admin.users.show', $user->id) }}"
                                     class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
                                     <i class="fas fa-eye"></i>
